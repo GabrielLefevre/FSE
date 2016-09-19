@@ -15,7 +15,9 @@ ls data* >& /dev/null
 if ($status == 0) rm -f data*
 if (-f resultat) rm -f resultat
 
-sauvegarder le résultat de find dans le fichier data
+#sauvegarder le résultat de find dans le fichier data
+touch data 
+find Rep/ -type f > data
 
 touch data2
 debut boucle
