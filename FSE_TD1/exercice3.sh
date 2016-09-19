@@ -1,7 +1,7 @@
 #! /bin/csh
 # On donne la possibilité au utilisateur de pouvoir saisir plusieurs nombres par ligne
 # le programme s'arrête lorsque le nombre -1 est rencontré
-# les éléments non numérique ne sont pas pris en compte
+# les éléments non numérique ne sont pas pris en compte hfh
 if ($#argv != 0) then 
   echo "Le programme ne comporte pas d'argument"
   exit 1
