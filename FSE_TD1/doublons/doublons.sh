@@ -20,16 +20,18 @@ touch data
 find Rep/ -type f > data
 
 touch data2
-debut boucle
-  	set nomfic = 
-  	set repfic = 
-  	sauvegarder nomfic et repfic dans le fichier data2
-fin boucle
+foreach fic(`cat data`)
+  	set nomfic = `basename $fic <<data2`
+  	set repfic = `dirname $fic <<data2`
+  end
 
-créer le fichier data4 contenant la liste des noms de fichier sans doublons
-
+#créer le fichier data4 contenant la liste des noms de fichier sans doublons
+touch data3
+touch data4
+sort data2 >> data3
+uniq data3 >> data4
 
 foreach fichier (`cat data4`)
-   extraire la liste de référence de $fichier
-   effectuer la comparaison 2 à 2 des fichiers
+   #extraire la liste de référence de $fichier
+   #effectuer la comparaison 2 à 2 des fichiers
 end
