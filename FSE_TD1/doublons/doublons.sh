@@ -20,16 +20,25 @@ touch data
 find Rep/ -type f > data
 
 touch data2
+
 foreach fic(`cat data`)
-  	set nomfic = `basename $fic <<data2`
-  	set repfic = `dirname $fic <<data2`
+   dirname  "$fic" >> data2
   end
+  
+  
 
 #créer le fichier data4 contenant la liste des noms de fichier sans doublons
 touch data3
+
+foreach fich(`cat data`)
+   basename  "$fich" >> data3
+  end
+
+sort data3 >> datatmp
 touch data4
-sort data2 >> data3
-uniq data3 >> data4
+uniq datatmp >> data4
+rm datatmp
+
 
 foreach fichier (`cat data4`)
    #extraire la liste de référence de $fichier
