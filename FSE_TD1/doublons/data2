@@ -1,18 +1,22 @@
-Rep/r1
-Rep/r2
-Rep/r2
-Rep/r3/r31
-Rep/r3/r31
-Rep/r3/r31
-Rep/r3/r31
-Rep/r3/r32
-Rep/r3/r32
-Rep/r3/r32
-Rep/r3
-Rep/r3
-Rep/r4
-Rep/r5
-Rep/r5
-Rep
-Rep
-Rep
+create_rep_test.sh  .
+F1  ./Rep/r1
+F2  ./Rep/r2
+F1  ./Rep/r2
+F1  ./Rep/r3/r31
+F3  ./Rep/r3/r31
+F2  ./Rep/r3/r31
+F4  ./Rep/r3/r31
+F1  ./Rep/r3/r32
+F4  ./Rep/r3/r32
+F3  ./Rep/r3/r32
+F2  ./Rep/r3
+F1  ./Rep/r3
+F1  ./Rep/r4
+F1  ./Rep/r5
+F3  ./Rep/r5
+F1  ./Rep
+F2  ./Rep
+resultat_doublons  ./Rep
+doublons.sh  .
+doublons2.sh  .
+data  .
