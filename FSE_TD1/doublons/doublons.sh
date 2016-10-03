@@ -40,7 +40,8 @@ uniq datatmp >> data4
 rm datatmp
 
 
-foreach fichier (`cat data4`)
+foreach fichier(`cat data4`)
+	
    #extraire la liste de référence de $fichier
    #effectuer la comparaison 2 à 2 des fichiers
 end
