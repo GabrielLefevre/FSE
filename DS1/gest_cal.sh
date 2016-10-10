@@ -22,6 +22,16 @@ else
 		if (! -f nomfic) touch nomfic
 		cat "CALEPIN" > "nomfic"
      else if ("$argv[1]" == "-max") then
+		
+		set nblignes=`cat CALEPIN | wc -l`
+		set i=1;
+
+		while ( $i <= $nblignes)
+		set l=`cat CALEPIN | head -n $i | tail -n 1`0
+		echo $l
+		set i=`expr $i + 1`
+		end 
+		
 		echo "non terminé"
      else if ("$argv[1]" == "-add") then
 		if (! -f ficNotes) then
